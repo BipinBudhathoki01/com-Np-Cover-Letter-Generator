@@ -34,5 +34,3 @@ This project is licensed under the [MIT License](LICENSE).
 We would like to express our gratitude to [BipinBudhathoki01](https://github.com/BipinBudhathoki01) for creating and maintaining this tool, as well as the open-source community for their valuable contributions and feedback.
 
 ---
-
-F
