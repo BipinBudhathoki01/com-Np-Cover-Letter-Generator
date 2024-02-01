@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Np Domain Registration Cover Letter Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <section class="section">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-half">
+                        <div class="box">
+                            <form @submit.prevent="coverLetter()">
+                                <div class=" field ">
+                                    <label class="label is-size-5 ">Name</label>
+                                    <div class="control ">
+                                        <input class="input is-medium " type="text " placeholder="Ex: Bipin Budhathoki " id="name " v-model="name " required="required">
+                                    </div>
+                                </div>
+                                <div class=" field ">
+                                    <label class="label is-size-5 ">Email</label>
+                                    <div class="control ">
+                                        <input class="input is-medium" type="email" placeholder="Ex: bipin@gmail.com" id="email " v-model="email " required="required">
+                                    </div>
+                                </div>
+                                <div class="field ">
+                                    <label class="label is-size-5 ">Domain Name</label>
+                                    <div class="control ">
+                                        <input class="input is-medium " type="text " placeholder="Ex: www.bipin.com.np " id="address " v-model="address " required="required">
+                                    </div>
+                                </div>
+                                <div class="field ">
+                                    <div class="control buttons is-centered ">
+                                        <button class="button is-primary is-medium ">Generate
+                                            Cover Letter</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column is-half" v-show="isShowing" v-cloak>
+                        <div ref="printcontent">
+                            <div class="box">
+                                <div class="content is-size-5 ">
+                                    <p class="has-text-right has-text-weight-bold ">Date: {{currentDate()}}</p>
+                                    <p class="has-text-weight-semibold ">To<br> The Host Master<br> Mercantile Communication Pvt. Ltd</p>
+                                    <p class="has-text-centered has-text-weight-bold ">Subject: <u>About Domain
+                                                Registration</u></p>
+                                    <p>Dear Sir/Madam,</p>
+                                    <p>I would like to request you for the domain registration of
+                                        <strong>{{address}}</strong>, for which I shall be very much obliged to you.</p>
+                                    <p>Applying for registration of the domain <Strong>{{address}}</Strong> follows all the term and conditions of Domain registration residing at “https://register.com.np/terms-and-conditions”. I submit the required for the domain registrations as per the rule.</p>
+                                    <p>I would be very grateful indeed for your help. Needless to say, I will be glad to supply you with any further information you may need. I look forward to hearing from you soon.
+                                    </p>    
+                                    <p>Thanking You. <br> Sincerely,
+                                    </p>
+                                    <p>...........................<br><strong>{{name}}</strong><br> {{email}}
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control buttons is-centered ">
+                                <button class="button is-danger is-medium mt-2" @click.preventDefault="printThis">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="./static/ddn.js"></script>
+    <script src="./static/main.js">
+    </script>
+</body>
+</html>
